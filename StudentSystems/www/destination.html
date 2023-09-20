@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <!--<link rel="stylesheet" type="text/css" href="css/service.css">-->
+    <script src="../Scripts/jquery-3.0.0.js"></script>
+
+    <title>Ogrenci Servis Sistemi</title>
+    <style>
+        #varis-bilgisi {
+            display: none;
+        }
+
+        #listeleservarnok {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container d-flex justify-content-between">
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#ac">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="ac">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="traveller.html">Yolcularim </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destination.html">Servis Variş Noktaları</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="navbar-brand">Servis Varış Noktası</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ac1">
+                <span class="">
+                    <img src="images/setting.png" width="28" />
+                </span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="ac1">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="" href="">Profilim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="" href="contactService.html">Bize Ulasın</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="" href="help.html">Yardım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="" href="index.html">Çıkış Yap</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br />
+    <div class="container">
+        <div class="row  d-flex justify-content-center">
+            <div class="col col-lg-2 ">
+                <button id="destination-add" type="button" class="btn btn-success btn-sm col-12">Yeni Hedef Ekle</button>
+            </div>
+            <div class="col col-lg-2">
+                <button id="destination-list" type="button" class="btn btn-warning btn-sm col-12">Hedefleri Listele</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table" id="listeleservarnok">
+        <table class="table  table-striped table-danger">
+            <thead>
+                <tr>
+                    <td>Hedef</td>
+                    <td>Ayarlar</td>
+                </tr>
+            </thead>
+            <tbody id="write_here"></tbody>
+        </table>
+    </div>
+    <hr />
+
+    <div class="container-fluid">
+        <div class="container" id="varis-bilgisi">
+            <form id="needs-validation" method="post">
+                <b class="form-control">Surucu kodu</b>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="servis_id12" name="servis_id12" required="" placeholder="" disabled />
+                </div>
+                <b class="form-control">Hedef Adi</b>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="adi" id="kurumad" required="" placeholder="Selcuk Universitesi"  />
+                </div>
+                <b class="form-control">Konum Bilgisi</b>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="konum" id="bilgi-konum" required="" placeholder=""  />
+                    <button class="btn btn-danger col-12 btn-sm" id="konumbul">Konum Bul</button>
+                </div><hr />
+                <div class="container">
+                    <button class="btn btn-outline-success btn-sm col-12" name="konumonay" id="varis_ekle" type="submit">Varis Noktasi Olarak Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!--<div class="container ">
+        <form class="mx-auto" method="post">
+            <div class="input-group">
+                <input id="" class="form-control" type="text" placeholder="Sürücü Kodu" disabled />
+            </div><br />
+            <div class="input-group">
+                <input id="" class="form-control" type="text" placeholder="Adres" />
+            </div><br />
+            <div class="input-group">
+                <input id="" class="form-control" type="text" placeholder="Konum bilgisi" />
+            </div><br />
+        </form>
+        <button class="btn btn-danger col-12 mx-auto ">Konum Bul</button> <hr />
+
+    </div>
+    <div class="container btn bg-white btn-primary  ">
+            <button class="btn btn-outline-success col-10 ">Varış Noktasını Olarak Belirle</button>
+    </div>-->
+
+    <script src="scripts/destinationPage.js"></script>
+    <script src="https://kit.fontawesome.com/f3011c516a.js" crossorigin="anonymous"></script>
+    <script src="../Scripts/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>

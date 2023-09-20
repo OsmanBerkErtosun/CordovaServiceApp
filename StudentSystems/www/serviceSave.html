@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <!--<link rel="stylesheet" type="text/css" href="css/service.css">-->
+    <script src="../Scripts/jquery-3.0.0.js"></script>
+
+    <title>Ogrenci Servis Sistemi</title>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container d-flex justify-content-between col-12">
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#ac">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="ac">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Giriş Yap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="serviceRegistrationHelp.html">Kayıt Yardım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hakkında</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="navbar-brand ">Servis Kayıt</a>
+            <a></a>
+        </div>
+    </nav>
+
+    <br />
+
+
+
+    <div class="container-fluid">
+        <div class="container" id="kayit-ekle">
+            <form id="needs">
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    <input id="ktc" type="text" class="form-control" placeholder="TC kimlik No" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    <input id="kad" type="text" class="form-control" placeholder="Adınız" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    <input id="ksoyad" type="text" class="form-control" placeholder="Soyadmınız" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    <input id="kmail" type="text" class="form-control" placeholder="E mail" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    <input id="ktelefon" type="text" class="form-control" placeholder="(5xx) xxx xx xx" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    <input id="kplaka" type="text" class="form-control" placeholder="Araç Plaka" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    <input id="kfirma" type="text" class="form-control" placeholder="Firma Adı" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    <input id="ksifre" type="text" class="form-control" placeholder="Şifre" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <input id="kfoto" type="file" name="Yükle[]" />
+                </div>
+                <br />
+                <button id="driversave" type="submit" class="btn btn-dark btn-sm col-12">Kayıt Ol</button>
+            </form>
+        </div>
+        <div class="modal fade" id="modal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="examp">Bilgilendirme</h5>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal1">
+                        <span></span>
+                    </button>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Sürücü kaydı Başarılı. Sistem onaylandıktan sonra sürücü kodunuzu mail adresinize gönderilecektir.</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <p><a href="index.html" class="btn btn-success" role="button">Anladım</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/serviceSave.js"></script>
+    <script src="https://kit.fontawesome.com/f3011c516a.js" crossorigin="anonymous"></script>
+    <script src="../Scripts/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>

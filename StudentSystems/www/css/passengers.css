@@ -1,0 +1,42 @@
+﻿body {
+    font-family: Arial, sans-serif;
+}
+
+.menu-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#toggle-menu {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    #menu li {
+        margin: 10px 0;
+    }
+
+    #menu a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 18px;
+        transition: color 0.3s;
+    }
+
+        #menu a:hover {
+            color: #3498db;
+        }
+
+.hidden {
+    display: none;
+}
