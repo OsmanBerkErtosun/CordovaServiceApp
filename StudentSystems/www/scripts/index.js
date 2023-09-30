@@ -33,5 +33,23 @@
 
 function gonder1() {
     var des = document.getElementById("#kkod").value;
-    
+    localStorage.setItem('service_id', des);
+
+    var des1 = document.getElementById("ktel").value;
+    var gel1 = "http://localhost:4400/api/service";
+
+    $.getJSON(gel1, function (gelen) {
+        for (var i = 0; i < gelen.length; i++) {
+            var ob = gelen[i];
+            if (ob.telefon != des1)
+                continue;
+            localStorage.setItem('adigonder', ob.name);
+            localStorage.setItem('soyadgonder', ob.surname);
+            localStorage.setItem('telgonder', ob.phone);
+            localStorage.setItem('mailgonder', ob.email);
+            localStorage.setItem('plakagonder', ob.plake);
+            localStorage.setItem('firmagonder', ob.company);
+            localStorage.setItem('tcgonder', ob.tc);
+        }
+    });
 }

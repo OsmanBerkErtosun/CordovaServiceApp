@@ -27,7 +27,6 @@
     </style>
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container d-flex justify-content-between">
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#ac">
@@ -120,7 +119,6 @@
             <tbody id="write_here"></tbody>
         </table>
     </div>
-
     <div class="container-fluid">
         <div class="container" id="kayit-ekle">
             <form id="needs">
@@ -151,21 +149,42 @@
                 <br />
                 <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-key"></i></span>
-                    <input id="ktel" type="text" class="form-control" placeholder="(5xx) xxx xx xx" />
+                    <input id="ktel" type="number" class="form-control" placeholder="(5xx) xxx xx xx" />
                 </div>
                 <br />
                 <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-key"></i></span>
-                    <input id="ktel" type="text" class="form-control" placeholder="Yolcu Okul/Firma" />
+                    <input id="kfirma" type="text" class="form-control" placeholder="Yolcu Okul/Firma" />
                 </div>
                 <br />
                 <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-key"></i></span>
-                    <input id="ktel" type="text" class="form-control" placeholder="Yolcunun Şifresi" />
+                    <input id="ksifre" type="password" class="form-control" placeholder="Yolcunun Şifresi" />
                 </div>
                 <br />
                 <button id="Traveller" type="submit" class="btn btn-dark btn-sm col-12">Kayıt Ekle</button>
             </form>
+        </div>
+
+        <div class="modal fade" id="yolcuKayit">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="examp">Bilgilendirme</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-dismiss="modal">
+                        <span></span>
+                    </button>
+                    <div class="modal-body">
+                        <div>
+                            <label>öğreci kaydınız başarılı.</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <p><a href="traveller.html" class="btn btn-success" role="button">Anladım</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

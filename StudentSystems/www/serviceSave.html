@@ -52,7 +52,7 @@
             <form id="needs">
                 <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-key"></i></span>
-                    <input id="ktc" type="text" class="form-control" placeholder="TC kimlik No" />
+                    <input id="ktc" type="number" maxlength="11" class="form-control" placeholder="TC kimlik No" />
                 </div>
                 <br />
                 <div class="input-group">
@@ -67,12 +67,12 @@
                 <br />
                 <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-key"></i></span>
-                    <input id="kmail" type="text" class="form-control" placeholder="E mail" />
+                    <input id="kmail" type="email" class="form-control" placeholder="E mail" />
                 </div>
                 <br />
                 <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-key"></i></span>
-                    <input id="ktelefon" type="text" class="form-control" placeholder="(5xx) xxx xx xx" />
+                    <input id="ktelefon" type="number" class="form-control" placeholder="(5xx) xxx xx xx" />
                 </div>
                 <br />
                 <div class="input-group">
@@ -86,8 +86,8 @@
                 </div>
                 <br />
                 <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-key"></i></span>
-                    <input id="ksifre" type="text" class="form-control" placeholder="Şifre" />
+                    <span class="input-group-text "><i class="fas fa-key"></i></span>
+                    <input id="ksifre" type="password" class="form-control" placeholder="Şifre" />
                 </div>
                 <br />
                 <div class="input-group">
@@ -97,6 +97,7 @@
                 <button id="driversave" type="submit" class="btn btn-dark btn-sm col-12">Kayıt Ol</button>
             </form>
         </div>
+    </div>
         <div class="modal fade" id="modal1">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -117,7 +118,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 
     <script src="scripts/serviceSave.js"></script>
     <script src="https://kit.fontawesome.com/f3011c516a.js" crossorigin="anonymous"></script>

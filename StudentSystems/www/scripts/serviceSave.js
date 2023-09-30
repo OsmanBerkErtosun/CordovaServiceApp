@@ -27,8 +27,8 @@
         .done(function (data) {
 
             $("modal1").modal('show');
-            window.id = data;
-        })
+            window.id = da
+         })
 
         .fail(function () {
             alert('olmadi');
