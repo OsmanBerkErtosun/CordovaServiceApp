@@ -66,33 +66,36 @@ $(document).ready(function () {
 
 });
 
-//$(document).ready(function () {
-//    var site = "http://localhost:8080/api/traveller/find-all-traveller";
-//    var site2 = "http://localhost:8080/api/status/find-all-status";
-//    var dizi = [];
-//    console.write("http://localhost:8080/api/status/find-all-status");
-//    $("#lists").click(function () {
-//        $.getJSON(site2, function (gelen2) {
-//            t = 0;
-//            for (var i = 0; i < gelen2.length; i++) {
-//                var ob2 = gelen2[i];
-//                if (ob2.service_id != localStorage.getItem("service_id"))
-//                    continue;
-//                dizi[t] = ob2.durumad;
-//                t++;
-//            }
-//            $.getJSON(site2, function (gelen2) {
-//                $("#write_here").html('');
-//                m = 0;
-//                for (var j = 0; j < gelen; j++) {
-//                    var obj = gelen[j];
-//                    if (obj.service_id != localStorage.getItem("service_id"))
-//                        continue;
-//                    $("#write_here").append('<tr>');
-//                    $("#write_here").append('<tr>');
-//                    $("#write_here").append('<tr>');
-//                }
-//            }
-//        })
-//    })
-//});
+$(document).ready(function () {
+    var site = "http://localhost:8080/api/traveller/find-all-traveller";
+    var site2 = "http://localhost:8080/api/status/find-all-status";
+    var dizi = [];
+    console.write("http://localhost:8080/api/status/find-all-status");
+    $("#lists").click(function () {
+        $.getJSON(site2, function (gelen2) {
+            t = 0;
+            for (var i = 0; i < gelen2.length; i++) {
+                var ob2 = gelen2[i];
+                if (ob2.service_id != localStorage.getItem("service_id"))
+                    continue;
+                dizi[t] = ob2.durumad;
+                t++;
+            }
+            $.getJSON(site2, function (gelen2) {
+                $("#write_here").html('');
+                m = 0;
+                for (var j = 0; j < gelen; j++) {
+                    var obj = gelen[j];
+                    if (obj.service_id != localStorage.getItem("service_id"))
+                        continue;
+                    $("#write_here").append('<tr>');
+                    $("#write_here").append('<td class:"small">' + obj.name + "&nbsp;" + obj.surname + '<td>');
+                    $("#write_here").append('<td>' + dizi[m] + '</td><td>' + "&nbsp;" + "&nbsp;" + "&nbsp;" + '<button id ="' + obj.student_id + '" class="btn btn-outline-warning btn-sm" onclick = "yakala2"(' + obj.student_id + ')"><i class="fa fa-map-marker" arial-hidden="true"></i></button></td>');
+                    $("#write_here").append('<td><button id="' + obj.student_id + '" class="btn btn-primary btn-sm" onclick="yakala(' + obj.student_id + ')"><i class="far fa-edit"></i></button></td>');
+                    $("#write_here").append('</tr>');
+
+                }
+            }
+        })
+    })
+});

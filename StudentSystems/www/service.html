@@ -17,7 +17,6 @@
     <title>Ogrenci Servis Sistemi</title>
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
         <div class="container d-flex justify-content-between">
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#ac">
@@ -36,7 +35,7 @@
                     </li>
                 </ul>
             </div>
-            <a href="#" class="navbar-brand">Servis Anasayfa</a>
+            <a class="navbar-brand">Servis Anasayfa</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ac1">
                 <span class="">
                     <img src="images/setting.png" width="28" />
@@ -60,18 +59,16 @@
             </div>
         </div>
     </nav>
-
     <br />
     <script>
-        var gelenid = localStorage.getItem("ucode");
-        var gelenad = localStorage.getItem("adigonder");
+        var gelenid = localStorage.getItem("code");
+        var gelenad = localStorage.getItem("name");
     </script>
-
     <div class="container">
         <div class="row justify-content-sm-center">
             <div class="col col-lg-2 text-sm-center">
                 <b class="text-primary">
-                    Hosgeldiniz :
+                    Surucu Adı :
                     <a class="text-danger">
                         <script>document.write(gelenad)</script>
                     </a>
@@ -79,7 +76,7 @@
             </div>
             <div class="col col-lg-2 text-sm-end">
                 <b class="text-primary">
-                    &nbsp; &nbsp; &nbsp;  Hosgeldiniz :
+                    &nbsp;  &nbsp;  Surucu Kodu :
                     <a class="text-danger">
                         <script>document.write(gelenid)</script>
                     </a>
